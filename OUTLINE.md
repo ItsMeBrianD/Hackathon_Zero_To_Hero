@@ -82,6 +82,14 @@ It should show something similar to this, which includes the URL for our local a
 If you see `200`, then you have configured Supabase correctly; otherwise, double check that you have followed the steps correctly.
 
 
+## Updating our Vercel Build
+
+1. Open your project in Vercel
+2. Navigate to `Settings -> Environment Variables`
+3. Add 2 values matching your `.env` file
+   1. `VITE_SUPABASE_URL`
+   2. `VITE_SUPABASE_ANON_KEY`
+
 # Installing Tailwind
 
 Setting up tailwind should be very straightforward,
