@@ -1,0 +1,21 @@
+<textarea data-template>
+## Testing it all together
+
+Once you've completed these steps, open `src/routes/index.svelte` and replace it with the following block:
+```html
+<script>
+    // Import our new supabase client
+    import {supabase} from "$lib/db";
+</script>
+
+
+<!-- Attempt to select all user profiles -->
+{#await supabase.from("profiles").select("*")}
+    <!-- Show a loading indicator -->
+    Loading...
+{:then r}
+    <!-- Display the HTTP status that is returned -->
+    {r.status}
+{/await}
+```
+</textarea>

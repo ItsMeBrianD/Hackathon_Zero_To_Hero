@@ -1,0 +1,37 @@
+<textarea data-template>
+
+## Adding Supabase to our project
+
+Open your project in Supabase, and fill in the appropriate fields in the `.env` file. 
+
+_Remove the `SUPABASE_PRIVATE_KEY` and `SUPABASE_JWT_SECRET` lines, we won't need them for this project, and they can pose a security risk._
+
+You should end up with something like this:
+
+```bash
+# .env
+VITE_SUPABASE_URL=[[ Project Configuration -> URL ]]
+VITE_SUPABASE_ANON_KEY=[[ Project Api Keys -> anon public ]]
+```
+---
+#### Adding Supabase to our project
+
+Next, lets make a couple tweaks to the generated `src/lib/db.js`, these are optional, and mostly stylistic, but it will keep things consistent as we continue on.
+
+1. Rename `db.js` to `db.ts`
+2. Delete line 8:
+
+	```typescript
+	export default supabase
+    ```
+
+3. Change line 3:
+
+    ```typescript
+	// Add export
+
+    export const supabase = createClient(
+	```
+
+
+</textarea>

@@ -1,0 +1,29 @@
+html {
+    --r-code-font: "Roboto Mono" !important;
+}
+
+.reveal ol, ul {
+	width: 100%;
+}
+
+.reveal code {
+    font-size: calc( var(--r-main-font-size) * 0.8);
+    color: var(--r-link-color)
+}
+
+.reveal .code-wrapper code {
+    line-height: 1;
+}
+.reveal .slides {
+    width: 1030px !important;
+}
+
+.reveal .slides > section {
+    height: 100vh;
+    top: 0 !important;
+    padding: 64px;
+}
+
+p {
+    text-align:left;
+}

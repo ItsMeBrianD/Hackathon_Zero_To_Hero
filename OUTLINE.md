@@ -97,7 +97,7 @@ Setting up tailwind should be very straightforward,
 	```
 	npx svelte-add@latest tailwindcss
 	```
-2. Configure the newly made `postcss.config.csj`
+2. Configure the newly made `postcss.config.cjs`
 	3. Add this line at the top of the file:
 	```typescript
 	const nesting = require("tailwindcss/nesting");

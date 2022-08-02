@@ -1,0 +1,51 @@
+<textarea data-template>
+## Adding the Gradient
+
+### Goals
+- Seeing another case of using non-standard values in tailwind
+
+For this step, we'll be adding a `<style>` tag to our element, and using that to construct gradients for our background and text.
+
+To begin, add to the bottom of your (almost) finished component:
+
+```html
+<style lang="postcss">
+	.bg-peach {
+		@apply from-[#FFECD2] to-[#FCB69F] bg-gradient-to-br;
+	}
+
+	.text-peach {
+		@apply from-[#FFECD2] to-[#FCB69F] bg-gradient-to-br 
+                text-transparent bg-clip-text leading-relaxed;
+	}
+</style>
+```
+
+
+---
+## Adding the Gradient
+Next, add the `bg-peach` class to your background element (`main` in the provided examples), and the `text-peach` class to your "Log In" element (`h1` in the provided examples).
+
+Now that we have the gradient added, lets break down what happened a little bit:
+
+Svelte components consist of three parts:
+- `<script>`
+- `<style>`
+- The content of the component, as HTML
+
+By adding `<style lang="postcss">` we've both added a place for our CSS to live, as well as indicated to Svelte that we will be writing `PostCSS` <sup>TailwindCSS is built on top of postcss</sup>.
+
+
+---
+## Adding the Gradient
+Next, we've defined some selectors, `.bg-peach` and `.text-peach`, just like we would in CSS. Things don't really start getting weird until we run into `@apply`. The `@apply` statement is a Tailwind construct to combine tailwind classes into larger ones. It is most commonly used to create reusable [components](./README.md#components), but can also be used to get tailwind classes out of your markdown and into the `<style>` block (see [`index.svelte` from the example](./project/src/routes/index.svelte#L21))
+
+In this case, we are combining the classes needed to build a [gradient](https://tailwindcss.com/docs/gradient-color-stops), because repeating them in multiple places would make consistency much harder over time.
+
+---
+## Adding the Gradient
+
+### End Result
+<img src="/images/everything.png" width="600px"/>
+
+</textarea>
