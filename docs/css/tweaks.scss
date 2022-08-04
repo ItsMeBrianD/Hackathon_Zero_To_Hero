@@ -15,13 +15,13 @@ html {
     line-height: 1;
 }
 .reveal .slides {
-    width: 1030px !important;
+    // width: 1030px !important;
 }
 
 .reveal .slides > section {
     height: 100vh;
     top: 0 !important;
-    padding: 64px;
+    padding-top: 64px;
 }
 
 p {
